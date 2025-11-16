@@ -12,14 +12,12 @@
 
   <style>
     /* CSS:BASE-START */
-    /* 全站基底樣式（僅元素與 class 選擇器；禁止使用 ID 選擇器） */
-
     :root {
-      --bg: #0b1220; /* 深藍背景 */
-      --panel: #0f1724; /* 卡片 / header 背景 */
-      --muted: #9aa4b2; /* 次要文字 */
-      --text: #e6eef6; /* 主文字 */
-      --accent: #2aa6d6; /* 主色：青藍 */
+      --bg: #0b1220;
+      --panel: #0f1724;
+      --muted: #9aa4b2;
+      --text: #e6eef6;
+      --accent: #2aa6d6;
       --soft: rgba(255,255,255,0.04);
       --container-max: 1100px;
     }
@@ -33,23 +31,14 @@
       background: linear-gradient(180deg, var(--bg) 0%, #07101a 100%);
       color: var(--text);
       line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-rendering: optimizeLegibility;
       font-size: 16px;
     }
 
-    .page {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
+    .page { min-height: 100vh; display: flex; flex-direction: column; }
     .container {
       width: 100%;
       max-width: var(--container-max);
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 auto;
       padding-left: 16px;
       padding-right: 16px;
     }
@@ -68,16 +57,11 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
       padding: 12px 0;
+      gap: 12px;
     }
 
-    .brand {
-      font-weight: 600;
-      letter-spacing: 0.2px;
-      display: inline-block;
-    }
-
+    .brand { font-weight: 600; letter-spacing: 0.2px; }
     .brand .brand-sub {
       display: block;
       font-weight: 400;
@@ -85,12 +69,7 @@
       color: var(--muted);
     }
 
-    nav.nav-links {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-
+    nav.nav-links { display: flex; gap: 8px; }
     a.nav-link {
       color: var(--text);
       text-decoration: none;
@@ -100,18 +79,13 @@
       transition: background 160ms ease, color 160ms ease, transform 120ms ease;
     }
 
-    a.nav-link:hover,
-    a.nav-link:focus {
+    a.nav-link:hover, a.nav-link:focus {
       background: var(--soft);
       color: var(--accent);
       transform: translateY(-1px);
     }
 
-    main {
-      flex: 1 0 auto;
-      padding-top: 18px;
-      padding-bottom: 48px;
-    }
+    main { flex: 1 0 auto; padding-top: 18px; padding-bottom: 48px; }
 
     footer.site-footer {
       padding: 24px 0;
@@ -121,34 +95,13 @@
       font-size: 14px;
     }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 8px;
-    }
+    img { max-width: 100%; display: block; border-radius: 8px; }
 
-    .section {
-      padding: 36px 0;
-    }
+    .section { padding: 36px 0; }
+    .section-title { margin: 0 0 12px; font-size: 20px; color: var(--text); }
+    p.lead { margin: 0 0 16px; color: var(--muted); font-size: 15px; }
 
-    .section .section-title {
-      margin: 0 0 12px 0;
-      font-size: 20px;
-      color: var(--text);
-    }
-
-    p.lead {
-      margin: 0 0 16px 0;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .grid {
-      display: grid;
-      gap: 16px;
-    }
-
+    .grid { display: grid; gap: 16px; }
     .card {
       background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
       border: 1px solid rgba(255,255,255,0.03);
@@ -156,10 +109,7 @@
       border-radius: 12px;
     }
 
-    .muted {
-      color: var(--muted);
-      font-size: 14px;
-    }
+    .muted { color: var(--muted); font-size: 14px; }
 
     /* CSS:HERO-START */
     .section-hero {
@@ -170,26 +120,15 @@
       gap: 20px;
     }
 
-    .hero-inner {
-      display: grid;
-      gap: 18px;
-    }
-
+    .hero-inner { display: grid; gap: 18px; }
     .hero-copy { max-width: 720px; }
 
     .hero-title {
-      font-size: 28px;
-      margin: 0 0 6px 0;
-      color: var(--text);
-      line-height: 1.05;
-      letter-spacing: -0.3px;
+      font-size: 28px; margin: 0 0 6px;
+      color: var(--text); line-height: 1.05; letter-spacing: -0.3px;
     }
 
-    .hero-sub {
-      margin: 0 0 12px 0;
-      color: var(--muted);
-      font-size: 15px;
-    }
+    .hero-sub { margin: 0 0 12px; color: var(--muted); font-size: 15px; }
 
     .hero-cta {
       display: inline-block;
@@ -202,33 +141,31 @@
       box-shadow: 0 6px 18px rgba(42,166,214,0.12);
     }
 
-    .hero-visual {
-      display: none;
-    }
+    .hero-visual { display: none; }
     /* CSS:HERO-END */
 
-
     /* CSS:ABOUT-START */
-    .section-about .about-grid {
-      display: grid;
-      gap: 12px;
-    }
-
+    .section-about .about-grid { display: grid; gap: 12px; }
     .about-bio { color: var(--muted); }
-
-    .about-figure {
-      border-radius: 12px;
-      overflow: hidden;
-      max-width: 420px;
+    .about-figure { border-radius: 12px; overflow: hidden; max-width: 420px; }
+    .about-list { margin: 12px 0 20px; padding-left: 20px; }
+    .cta-row { display: flex; gap: 10px; margin-top: 16px; }
+    .btn {
+      display: inline-block;
+      padding: 9px 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      color: white;
+      background: linear-gradient(90deg, var(--accent), #1f9ec0);
+      box-shadow: 0 6px 18px rgba(42,166,214,0.12);
     }
     /* CSS:ABOUT-END */
 
-
     /* CSS:SKILLS-START */
     .section-skills .skill-list {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
+      display: flex; gap: 8px; flex-wrap: wrap;
     }
 
     .skill-pill {
@@ -241,64 +178,26 @@
     }
     /* CSS:SKILLS-END */
 
-
     /* CSS:PROJECTS-START */
-    .section-projects .projects-grid {
-      display: grid;
-      gap: 12px;
-    }
+    .section-projects .projects-grid { display: grid; gap: 12px; }
 
-    .project-card {
-      display: grid;
-      gap: 10px;
-    }
-
-    .project-card .project-title {
-      font-weight: 600;
-      font-size: 15px;
-      margin: 0;
-    }
-
-    .project-card .project-desc {
-      color: var(--muted);
-      margin: 0;
-      font-size: 14px;
-    }
+    .project-card { display: grid; gap: 10px; }
+    .project-title { font-weight: 600; font-size: 15px; margin: 0; }
+    .project-desc { color: var(--muted); margin: 0; font-size: 14px; }
     /* CSS:PROJECTS-END */
 
-
     /* CSS:CONTACT-START */
-    .section-contact .contact-list {
-      display: grid;
-      gap: 8px;
-    }
-
-    .contact-item {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-    }
-
-    .contact-item a {
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    .contact-item .contact-meta {
-      color: var(--muted);
-      font-size: 14px;
-    }
+    .section-contact .contact-list { display: grid; gap: 8px; }
+    .contact-item { display: flex; gap: 12px; align-items: center; }
+    .contact-item a { color: var(--text); text-decoration: none; }
+    .contact-meta { color: var(--muted); font-size: 14px; }
     /* CSS:CONTACT-END */
-
 
     /* CSS:RWD-START */
     @media (min-width: 520px) {
       .hero-title { font-size: 32px; }
       .hero-visual { display: block; }
-      .section-hero {
-        padding-top: 56px;
-        padding-bottom: 56px;
-      }
+      .section-hero { padding-top: 56px; padding-bottom: 56px; }
     }
 
     @media (min-width: 768px) {
@@ -307,8 +206,6 @@
         grid-template-columns: 1fr 380px;
         align-items: center;
       }
-
-      .hero-inner { align-self: center; }
 
       .section-about .about-grid {
         grid-template-columns: 1fr 380px;
@@ -319,17 +216,13 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .container {
-        padding-left: 24px;
-        padding-right: 24px;
-      }
+      .container { padding-left: 24px; padding-right: 24px; }
     }
 
     @media (min-width: 1200px) {
       .section-projects .projects-grid {
         grid-template-columns: repeat(3, 1fr);
       }
-
       .hero-title { font-size: 40px; }
     }
     /* CSS:RWD-END */
@@ -380,22 +273,43 @@
 
   <!-- SECTION:ABOUT-START -->
   <section id="about" class="section section-about" aria-labelledby="about-heading">
-    <div class="container about-grid">
-      <div>
-        <h2 id="about-heading" class="section-title">關於我（之後會用 Section SDD 替換）</h2>
-        <p class="about-bio">這裡目前是 About 區的占位內容；未來會用 Section SDD 產生更完整的自我介紹、經歷與價值陳述。請把新的 section 程式碼整段貼回來，取代這一區。</p>
+  <div class="container about-grid">
 
-        <p class="muted">（開發者提示：之後會用 Section SDD 的 Prompt 產生新的 section，請把新的 section 程式碼整段貼在這兩個註解中間，完全取代現在這一區。）</p>
+    <div>
+      <h2 id="about-heading" class="section-title">關於我</h2>
+
+      <p class="about-bio">
+        目前主要從事前端工程實作、教學與接案，專注在網站 UI 製作、可維護架構與使用者體驗。擅長把需求拆解成易於維護的元件、建立乾淨的樣式結構，並喜歡協助團隊理解前端如何更有效率地運作。
+      </p>
+
+      <p class="about-bio">
+        我的背景包含教學、協作與設計跨領域經驗，因此特別重視溝通、說明邏輯以及把複雜的技術講得簡單易懂。我喜歡在專案中保持透明、快速回饋，並確保所有人都能理解目前正在做什麼、為什麼這樣做。
+      </p>
+
+      <ul class="about-list">
+        <li>協助你把設計稿快速轉成乾淨的前端介面</li>
+        <li>替團隊建立可維護的前端架構或元件設計</li>
+        <li>將技術問題轉成容易理解的流程與決策建議</li>
+      </ul>
+
+      <div class="cta-row">
+        <a href="#projects" class="btn">查看作品集</a>
+        <a href="#contact" class="btn">聯絡我</a>
       </div>
-
-      <aside class="card">
-        <figure class="about-figure">
-          <img src="https://source.unsplash.com/600x400/?developer,workspace" alt="開發者工作桌與筆電的示意照" loading="lazy">
-        </figure>
-        <p class="muted" style="margin-top:10px;">示意形象照（Unsplash）；僅為占位，正式內容會替換此區。</p>
-      </aside>
     </div>
-  </section>
+
+    <aside class="card">
+      <figure class="about-figure">
+        <img
+          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&auto=format&fit=crop&q=80"
+          alt="正在專注撰寫程式碼的工程師示意照"
+          loading="lazy"
+        >
+      </figure>
+    </aside>
+
+  </div>
+</section>
   <!-- SECTION:ABOUT-END -->
 
   <!-- SECTION:SKILLS-START -->
